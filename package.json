@@ -1,0 +1,23 @@
+{
+  "name": "sqreen",
+  "version": "1.0.0",
+  "description": "Sqreen coding challenge - RASP page V2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrishughallen/sqreen.git"
+  },
+  "author": "Chris Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrishughallen/sqreen/issues"
+  },
+  "homepage": "https://github.com/chrishughallen/sqreen#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
