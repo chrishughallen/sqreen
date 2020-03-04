@@ -718,6 +718,7 @@ header {
 
         @include media-breakpoint-sm {
           margin: 0 10px 10px;
+          display: block;
         }
 
         &.white {
@@ -1102,11 +1103,15 @@ header {
 
         @include media-breakpoint-md {
           width: 100%;
+          margin: 0 auto;
         }
 
         &.white {
           background-color: #fff;
           color: #4842B7;
+          &:hover {
+            background-color: #f2f2f2;
+          }
         }
 
         &.outlined-white {
@@ -1161,6 +1166,10 @@ footer {
             -webkit-transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
             transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
             margin-right: 20px;
+
+            &:hover {
+              opacity: 1;
+            }
           }
         }
 
@@ -1213,6 +1222,10 @@ footer {
                 line-height: 2.0;
                 color: rgba(255,255,255,0.7);
                 text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }
