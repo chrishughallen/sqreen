@@ -501,7 +501,8 @@ header {
         text-transform: uppercase; }
         @media (max-width: 768px) {
           .master-head-landing .wrapper .button-container .new-button {
-            margin: 0 10px 10px; } }
+            margin: 0 10px 10px;
+            display: block; } }
         .master-head-landing .wrapper .button-container .new-button.white {
           background-color: #fff;
           color: #4842B7; }
@@ -801,10 +802,13 @@ header {
         outline: none; }
         @media (max-width: 979px) {
           .try-sqreen.product .wrapper .button-v2 {
-            width: 100%; } }
+            width: 100%;
+            margin: 0 auto; } }
         .try-sqreen.product .wrapper .button-v2.white {
           background-color: #fff;
           color: #4842B7; }
+          .try-sqreen.product .wrapper .button-v2.white:hover {
+            background-color: #f2f2f2; }
         .try-sqreen.product .wrapper .button-v2.outlined-white {
           margin-top: 20px;
           background-color: transparent;
@@ -846,6 +850,8 @@ footer {
             -webkit-transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
             transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
             margin-right: 20px; }
+            footer nav .wrapper ul .sns li:hover {
+              opacity: 1; }
         footer nav .wrapper ul .copyright {
           font-size: 13px;
           font-weight: normal;
@@ -888,5 +894,7 @@ footer {
               line-height: 2.0;
               color: rgba(255, 255, 255, 0.7);
               text-decoration: none; }
+              footer nav .wrapper ul li ul li a:hover {
+                text-decoration: underline; }
         footer nav .wrapper ul .link-list {
           max-width: 180px; }

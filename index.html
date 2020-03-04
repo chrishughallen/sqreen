@@ -1,528 +1,338 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head lang="en">
+  <head lang="en">
+    <meta charset=UTF-8 />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Security Management Platform | Sqreen</title>
+    <meta name="description" content="Learn more about Sqreen's application security platform that helps teams protect applications, increase visibility and secure code." />
+    <link rel="canonical" href="https://www.sqreen.com/">
+    <link href="css/styles.css" rel="stylesheet"/>
+    <meta name="application-name" content="Sqreen" />
+    <meta http-equiv="cleartype" content="on" />
+  </head>
 
-   <!--
-       ___  __ _ _ __ ___  ___ _ __
-      / __|/ _` | '__/ _ \/ _ \ '_  \
-      \__ \ (_| | | |  __/  __/ | | |
-      |___/\__, |_|  \___|\___|_| |_|
-              |_|
-  -->
+  <body class="overflow">
 
-  <meta charset=UTF-8 />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- NAVBAR -->
+    <header class="white-nav">
+      <div class="wrapper">
+        <nav>
+          <div class="supnav">
+            <a href="https://my.sqreen.com/login?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=">Log in</a>
+            <a href="mailto:hey@sqreen.com">Contact us</a>
+          </div>
+          <div class="subnav">
+            <div class="left">
+              <a href="/" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 39.2" width="126" height="34">
+                  <path class="cube" d="M56.4 16c-1.7-.9-3.2-1.4-4.8-1.4-1.3 0-2.1.5-2.1 1.4 0 2.5 9.3.4 9.3 7.1 0 3-2.7 5.5-7 5.5-1.9 0-4.3-.4-5.9-1.3 0 0-.1 0-.1-.1-.2-.2-.3-.5-.2-.7l1.1-2.5c.1-.3.5-.4.8-.3l.2.1c1.4.6 2.9.9 4.2.9 2 0 2.7-.5 2.7-1.6 0-2.8-9.3-.8-9.3-7.1 0-2.9 2.5-5.4 6.4-5.4 2 0 4.7.7 6.4 1.7l.2.1c.3.2.4.5.2.8l-1.1 2.5c-.1.3-.5.4-.8.3h-.2zm17.5-4.7h2.9c.3 0 .6.3.6.6v23.9c0 .3-.3.6-.6.6h-2.9c-.3 0-.6-.3-.6-.6v-8.4c-1.1.7-2.7 1.3-4.3 1.3-5 0-8.8-4-8.8-9s3.8-9 8.8-9c1.6 0 3.2.5 4.3 1.3v-.1c0-.3.3-.6.6-.6zm-.6 11.4v-6c-1.2-1.2-2.6-1.9-4.2-1.9-2.7 0-4.7 2.1-4.7 4.9s2 4.9 4.7 4.9c1.6.1 3-.5 4.2-1.9zm18-11.4c-.9-.4-1.9-.5-2.8-.5-1.6 0-3.2.5-4.5 1.3v-.2c0-.3-.2-.5-.5-.5h-3.2c-.3 0-.5.2-.5.5v16.4c0 .3.2.5.5.5h3.2c.3 0 .5-.2.5-.5V16.6c1-1.1 2.6-1.8 4.3-1.8.4 0 .9 0 1.4.1.3.1.6-.1.7-.3l1.2-2.7c0-.2-.1-.5-.3-.6zm15.2 15.6c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5H95c.5 2.6 2.6 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.1.5 0 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.6-3.1-2.4 0-3.8 1.4-4.3 3.1zm29.5 9.3c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5h-11.5c.5 2.6 2.5 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.2.5-.1 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.5-3.1-2.5 0-3.9 1.4-4.4 3.1zm13.9-5.7v16.2c0 .3.3.6.6.6h3c.3 0 .6-.3.6-.6V16.6c1-1.1 2.6-1.8 4.3-1.8 2.7 0 4.1 1.5 4.1 4.3v9c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-9.4c0-4.8-2.7-7.9-8.1-7.9-1.6 0-3.2.5-4.5 1.3V12c0-.3-.3-.6-.6-.6h-2.9c-.3-.1-.6.2-.6.5z"></path>
+                  <ellipse class="circle" cx="17.3" cy="19.6" rx="9.3" ry="9.3"></ellipse>
+                  <path class="letters" d="M16 35.7v-15L2.7 13.1v13.2l4.7-2.7c.3.8.8 1.6 1.3 2.3l-4.9 2.8 12.2 7zm2.6 0l12.2-7-4.9-2.8c.5-.7 1-1.5 1.3-2.3l4.7 2.7V13.1l-13.3 7.7v14.9zM3.7 10.6l13.6 7.9 13.6-7.9-12.3-7.1V9c-.4-.1-.9-.1-1.3-.1s-.9 0-1.3.1V3.5L3.7 10.6zM18.5.3l14.9 8.6c.7.4 1.2 1.2 1.2 2.1v17.2c0 .9-.5 1.6-1.2 2.1l-14.9 8.6c-.7.4-1.7.4-2.4 0L1.2 30.3C.5 29.8 0 29.1 0 28.2V11c0-.9.5-1.6 1.2-2.1L16.1.3c.7-.4 1.6-.4 2.4 0z"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="right">
+              <div class="nav-item-container">
+                <div class="nav-item dropdown">
+                  <span>Platform</span>
+                  <div class="dropdown-container">
+                    <div class="columns">
+                      <div>
+                        <a href="/platform" class="icon-link">
+                          <img src="https://d33wubrfki0l68.cloudfront.net/ed10b5c799c46cd6f2cc21b3e6d5a8cb1d7952cd/368cf/assets/img/icons/platform.svg" alt="Sqreen Platform Icon">
+                          <span class="category">Platform</span>
+                        </a>
+                        <a href="/protect" class="icon-link">
+                          <img src="https://d33wubrfki0l68.cloudfront.net/ef303eee9403b16f97c9f1225da51b90add62eeb/33661/assets/img/icons/protection.svg" alt="Sqreen Protect Icon">
+                          <span class="category">Protect</span>
+                        </a>
+                        <a href="/observe" class="icon-link">
+                          <img src="https://d33wubrfki0l68.cloudfront.net/d21e56effaa8ee4c409c4ca2028bf8ec858aa471/ade7b/assets/img/icons/observe.svg" alt="Sqreen Observe Icon">
+                          <span class="category">Observe</span>
+                        </a>
+                        <a href="/test" class="icon-link">
+                          <img src="https://d33wubrfki0l68.cloudfront.net/faaafce07f58f1a76e7e8cec44504513081d3057/03edb/assets/img/icons/test.svg" alt="Sqreen Test Icon">
+                          <span class="category">Test</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-item dropdown">
+                  <span>Solutions</span>
+                  <div class="dropdown-container">
+                    <div class="columns">
+                      <div>
+                        <a href="/runtime-application-self-protection">RASP</a>
+                        <a href="/in-app-web-application-firewall">In-App WAF</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="/pricing" class="nav-item link">
+                  <span>Pricing</span>
+                </a>
+                <a href="/customers" class="nav-item link">
+                  <span>Customers</span>
+                </a>
+                <div class="nav-item dropdown">
+                  <span>Resources</span>
+                  <div class="dropdown-container">
+                    <div class="columns">
+                      <div>
+                        <a href="/resources">Content Library</a>
+                        <a href="/web-application-security">Learning Center</a>
+                        <a href="https://blog.sqreen.com/">Blog</a>
+                        <a href="https://docs.sqreen.com/">Docs</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="/demo" class="nav-item link">
+                  <span>Demo</span>
+                </a>
+                <a href="https://my.sqreen.com/signup?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=" class="nav-item button-v2 small">
+                  <span>Free Trial</span>
+                </a>
+              </div>
+              <div class="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="38" height="38" alt="Open the menu on mobile">
+                  <path d="M28.3 13.8H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <title>Application Security Management Platform | Sqreen</title>
-
-
-  <meta name="description" content="Learn more about Sqreen's application security platform that helps teams protect applications, increase visibility and secure code." />
-
-  <link rel="canonical" href="https://www.sqreen.com/">
-
-  <!-- Style -->
-  <link href="css/styles.css" rel="stylesheet"/>
-
-  <meta name="application-name" content="Sqreen" />
-  <meta http-equiv="cleartype" content="on" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@SqreenIO">
-  <meta name="twitter:creator" content="@SqreenIO" />
-  <meta name="twitter:url" content="https://www.sqreen.com/">
-  <meta name="twitter:text:title" content="Application Security Management Platform | Sqreen">
-  <meta name="twitter:description" content="Learn more about Sqreen's application security platform that helps teams protect applications, increase visibility and secure code." />
-  <meta name="twitter:image" content="https://www.sqreen.com/assets/img/share/share.png">
-
-  <!-- Facebook -->
-  <meta property="og:url" content="https://www.sqreen.com/">
-  <meta property="og:title" content="Application Security Management Platform | Sqreen">
-  <meta property="og:image" content="https://www.sqreen.com/assets/img/share/share.png">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="627">
-  <meta property="og:description" content="Learn more about Sqreen's application security platform that helps teams protect applications, increase visibility and secure code.">
-  <meta property="og:site_name" content="Sqreen">
-  <meta property="og:locale" content="en_US">
-
-
-
-  <!-- Favicon -->
-<!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png"> -->
-<link rel="manifest" href="/assets/img/favicon/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#4842b7">
-<meta name="theme-color" content="#4842b7">
-
-  <!-- Segment -->
-<script type="text/javascript">
-  ! function() {
-    var analytics = window.analytics = window.analytics || [];
-    if (!analytics.initialize)
-      if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
-      else {
-        analytics.invoked = !0;
-        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "page", "once", "off", "on"];
-        analytics.factory = function(t) {
-          return function() {
-            var e = Array.prototype.slice.call(arguments);
-            e.unshift(t);
-            analytics.push(e);
-            return analytics
-          }
-        };
-        for (var t = 0; t < analytics.methods.length; t++) {
-          var e = analytics.methods[t];
-          analytics[e] = analytics.factory(e)
-        }
-        analytics.load = function(t) {
-          var e = document.createElement("script");
-          e.type = "text/javascript";
-          e.async = !0;
-          e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-          var n = document.getElementsByTagName("script")[0];
-          n.parentNode.insertBefore(e, n)
-        };
-        analytics.SNIPPET_VERSION = "3.1.0";
-        analytics.load("5nxb5iyxWJCBesRTBrDlKocYYhI0yk6H");
-        analytics.page()
-      }
-  }();
-</script>
-
-<script src="assets/js/purser.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.0/qs.min.js"></script>
-<script type="text/javascript">var tracking = Object.assign({},Qs.parse(location.search, { ignoreQueryPrefix: true }),purser.fetch(),{originalReferrer: (window.sessionStorage && sessionStorage.getItem('referrer'))? sessionStorage.getItem('referrer'): document.referrer});if (window.sessionStorage && !sessionStorage.getItem('referrer')) {sessionStorage.setItem('referrer', document.referrer)}window.analytics.page(null, null, tracking);document.cookie = 'tracking=' + JSON.stringify(tracking) + ';domain=sqreen.com';</script>
-
-<!-- Heap Analytics -->
-<script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};heap.load("3784968534");</script>
-
-<!-- Fullstory -->
-<script>
-window['_fs_debug'] = false;
-window['_fs_host'] = 'fullstory.com';
-window['_fs_org'] = 'H52T8';
-window['_fs_namespace'] = 'FS';
-(function(m,n,e,t,l,o,g,y){
-    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-    g.consent=function(a){g("consent",!arguments.length||a)};
-    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-    g.clearUserCookie=function(){};
-})(window,document,window['_fs_namespace'],'script','user');
-</script>
-
-<!-- SUMO -->
-<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='0192db87363591a2d11e3ab3e0366ec2da806a510963217183f98874951131e1';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
-</head>
-
-<body class="overflow">
-
-  <!-- NAVBAR -->
-  <header class="white-nav">
-    <div class="wrapper">
-      <nav>
-        <div class="supnav">
-          <a href="https://my.sqreen.com/login?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=">Log in</a>
-          <a href="mailto:hey@sqreen.com">Contact us</a>
+    <!-- LANDING HEADER WITH VIDEO -->
+    <section class="master-head-landing">
+      <div class="wrapper">
+        <h1>Runtime Application Self-Protection <br>that works</h1>
+        <p>Sqreen’s unique Runtime Application Self-Protection (RASP) architecture provides in-depth visibility and protection beyond the HTTP layer. Trusted by security teams. Loved by developers.</p>
+        <div class="button-container">
+          <a href="https://my.sqreen.com/signup?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=" class="new-button white large rounded">Free trial</a>
+          <a href="https://www.sqreen.com/demo" class="new-button white large rounded outlined">Schedule a demo</a>
         </div>
-        <div class="subnav">
-          <div class="left">
-            <a href="/" class="logo">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 39.2" width="126" height="34">
-                <path class="cube" d="M56.4 16c-1.7-.9-3.2-1.4-4.8-1.4-1.3 0-2.1.5-2.1 1.4 0 2.5 9.3.4 9.3 7.1 0 3-2.7 5.5-7 5.5-1.9 0-4.3-.4-5.9-1.3 0 0-.1 0-.1-.1-.2-.2-.3-.5-.2-.7l1.1-2.5c.1-.3.5-.4.8-.3l.2.1c1.4.6 2.9.9 4.2.9 2 0 2.7-.5 2.7-1.6 0-2.8-9.3-.8-9.3-7.1 0-2.9 2.5-5.4 6.4-5.4 2 0 4.7.7 6.4 1.7l.2.1c.3.2.4.5.2.8l-1.1 2.5c-.1.3-.5.4-.8.3h-.2zm17.5-4.7h2.9c.3 0 .6.3.6.6v23.9c0 .3-.3.6-.6.6h-2.9c-.3 0-.6-.3-.6-.6v-8.4c-1.1.7-2.7 1.3-4.3 1.3-5 0-8.8-4-8.8-9s3.8-9 8.8-9c1.6 0 3.2.5 4.3 1.3v-.1c0-.3.3-.6.6-.6zm-.6 11.4v-6c-1.2-1.2-2.6-1.9-4.2-1.9-2.7 0-4.7 2.1-4.7 4.9s2 4.9 4.7 4.9c1.6.1 3-.5 4.2-1.9zm18-11.4c-.9-.4-1.9-.5-2.8-.5-1.6 0-3.2.5-4.5 1.3v-.2c0-.3-.2-.5-.5-.5h-3.2c-.3 0-.5.2-.5.5v16.4c0 .3.2.5.5.5h3.2c.3 0 .5-.2.5-.5V16.6c1-1.1 2.6-1.8 4.3-1.8.4 0 .9 0 1.4.1.3.1.6-.1.7-.3l1.2-2.7c0-.2-.1-.5-.3-.6zm15.2 15.6c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5H95c.5 2.6 2.6 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.1.5 0 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.6-3.1-2.4 0-3.8 1.4-4.3 3.1zm29.5 9.3c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5h-11.5c.5 2.6 2.5 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.2.5-.1 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.5-3.1-2.5 0-3.9 1.4-4.4 3.1zm13.9-5.7v16.2c0 .3.3.6.6.6h3c.3 0 .6-.3.6-.6V16.6c1-1.1 2.6-1.8 4.3-1.8 2.7 0 4.1 1.5 4.1 4.3v9c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-9.4c0-4.8-2.7-7.9-8.1-7.9-1.6 0-3.2.5-4.5 1.3V12c0-.3-.3-.6-.6-.6h-2.9c-.3-.1-.6.2-.6.5z"></path>
-                <ellipse class="circle" cx="17.3" cy="19.6" rx="9.3" ry="9.3"></ellipse>
-                <path class="letters" d="M16 35.7v-15L2.7 13.1v13.2l4.7-2.7c.3.8.8 1.6 1.3 2.3l-4.9 2.8 12.2 7zm2.6 0l12.2-7-4.9-2.8c.5-.7 1-1.5 1.3-2.3l4.7 2.7V13.1l-13.3 7.7v14.9zM3.7 10.6l13.6 7.9 13.6-7.9-12.3-7.1V9c-.4-.1-.9-.1-1.3-.1s-.9 0-1.3.1V3.5L3.7 10.6zM18.5.3l14.9 8.6c.7.4 1.2 1.2 1.2 2.1v17.2c0 .9-.5 1.6-1.2 2.1l-14.9 8.6c-.7.4-1.7.4-2.4 0L1.2 30.3C.5 29.8 0 29.1 0 28.2V11c0-.9.5-1.6 1.2-2.1L16.1.3c.7-.4 1.6-.4 2.4 0z"></path>
-              </svg>
-            </a>
+        <video class="new" playsinline="" autoplay="" controls="" muted="" preload="auto" poster="assets/img/illustrations/cover-new-video.png" type="video/mp4">
+          <source src="https://d33wubrfki0l68.cloudfront.net/b7b11d37afb81f8026fb0952a58ecd37fcba4d76/6870d/assets/img/illustrations/rasp_video.mp4">
+          <p>Your browser doesn't support HTML5 video.</p>
+        </video>
+      </div>
+    </section>
+
+    <!-- CUSTOMER CAROUSEL -->
+    <section class="home-testimonials">
+      <div class="wrapper">
+      <h2>Used by 800+ customers</h2>
+      <ul class="testimonials-list">
+        <li>
+          <div class="case-study">
+            <div class="left">
+              <img src="https://d33wubrfki0l68.cloudfront.net/2ccfa53087e94362ca5d3fc0d68c6845b94dabcd/66aa9/assets/img/logos/company-logos/freeagent.svg" alt="" class="logo">
+            </div>
+            <div class="right">
+              <blockquote>With Sqreen, we’ve been able to deal with some major attacks with ease over the past year. On top of that, the number of false positives is negligible, if not zero, which is a fantastic benefit. I know I only have to spring into action if it’s merited!</blockquote>
+              <span class="name">Richard Grey</span>
+              <span class="position">Head of Information Security at Freeagent</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="case-study">
+            <div class="left">
+              <img src="https://d33wubrfki0l68.cloudfront.net/586bdafbeaa2bcfd7b80d831dcdda331d34467f2/e4b73/assets/img/logos/company-logos/algolia.svg" alt="" class="logo">
+            </div>
+            <div class="right">
+              <blockquote>Sqreen delivers the security monitoring that Algolia needs to able to confidently promise a tier-one service to our customers.</blockquote>
+              <span class="name">Sylvain Utard</span>
+              <span class="position">VP Engineering at Algolia</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="case-study">
+            <div class="left">
+            <img src="https://d33wubrfki0l68.cloudfront.net/ddfe91bb87df9d7da55eddf96f66ebfc88e89b84/8334d/assets/img/logos/company-logos/lemonde.svg" alt="" class="logo">
           </div>
           <div class="right">
-            <div class="nav-item-container">
-              <div class="nav-item dropdown">
-                <span>Platform</span>
-                <div class="dropdown-container">
-                  <div class="columns">
-                    <div>
-                      <a href="/platform" class="icon-link">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/ed10b5c799c46cd6f2cc21b3e6d5a8cb1d7952cd/368cf/assets/img/icons/platform.svg" alt="Sqreen Platform Icon">
-                        <span class="category">Platform</span>
-                      </a>
-                      <a href="/protect" class="icon-link">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/ef303eee9403b16f97c9f1225da51b90add62eeb/33661/assets/img/icons/protection.svg" alt="Sqreen Protect Icon">
-                        <span class="category">Protect</span>
-                      </a>
-                      <a href="/observe" class="icon-link">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/d21e56effaa8ee4c409c4ca2028bf8ec858aa471/ade7b/assets/img/icons/observe.svg" alt="Sqreen Observe Icon">
-                        <span class="category">Observe</span>
-                      </a>
-                      <a href="/test" class="icon-link">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/faaafce07f58f1a76e7e8cec44504513081d3057/03edb/assets/img/icons/test.svg" alt="Sqreen Test Icon">
-                        <span class="category">Test</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="nav-item dropdown">
-                <span>Solutions</span>
-                <div class="dropdown-container">
-                  <div class="columns">
-                    <div>
-                      <a href="/runtime-application-self-protection">RASP</a>
-                      <a href="/in-app-web-application-firewall">In-App WAF</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="/pricing" class="nav-item link">
-                <span>Pricing</span>
-              </a>
-              <a href="/customers" class="nav-item link">
-                <span>Customers</span>
-              </a>
-              <div class="nav-item dropdown">
-                <span>Resources</span>
-                <div class="dropdown-container">
-                  <div class="columns">
-                    <div>
-                      <a href="/resources">Content Library</a>
-                      <a href="/web-application-security">Learning Center</a>
-                      <a href="https://blog.sqreen.com/">Blog</a>
-                      <a href="https://docs.sqreen.com/">Docs</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="/demo" class="nav-item link">
-                <span>Demo</span>
-              </a>
-              <a href="https://my.sqreen.com/signup?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=" class="nav-item button-v2 small">
-                <span>Free Trial</span>
-              </a>
+            <blockquote>Our website and applications are under constant attack from hackers and bots. Sqreen allowed us to secure our apps with staggering efficiency and was incredibly fast to set up.</blockquote>
+            <span class="name">Sacha Morard</span>
+            <span class="position">CTO at Le Monde Group</span>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div class="case-study">
+            <div class="left">
+              <img src="https://d33wubrfki0l68.cloudfront.net/55d8682f428cc341e947789cdd272ae91c6ab2c2/31114/assets/img/logos/company-logos/rainforest.svg" alt="" class="logo">
             </div>
-            <div class="burger">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="38" height="38" alt="Open the menu on mobile">
-                <path d="M28.3 13.8H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1z"></path>
-              </svg>
+            <div class="right">
+              <blockquote>Sqreen is open constantly in my browser. I check it every day and keep up with email alerts. As a one-person security team, the value for me is really peace of mind. I know Sqreen will alert me when anything happens, so I can focus on the other security items on my plate.</blockquote>
+              <span class="name">Nicolas Valcárcel</span>
+              <span class="position">Security Architect at Rainforest QA</span>
             </div>
           </div>
+        </li>
+        <li>
+          <div class="case-study">
+            <div class="left">
+            <img src="https://d33wubrfki0l68.cloudfront.net/029f1cd5adba6dec63c1216f8d38712735385906/eedea/assets/img/logos/company-logos/front.svg" alt="" class="logo">
+          </div>
+          <div class="right">
+            <blockquote>Sqreen supports the most important side of our business: the application. I know that if something goes wrong there, I will be alerted, and have visibility into the issue right away. The peace of mind that brings cannot be overstated.</blockquote>
+            <span class="name">Matthieu Bouthors</span>
+            <span class="position">Senior Security Engineer at Front</span>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div class="case-study">
+            <div class="left">
+            <img src="https://d33wubrfki0l68.cloudfront.net/6247b81358a4e8d9945f25673a97bfe7d844013e/d748f/assets/img/logos/company-logos/tripelbyte.svg" alt="" class="logo">
+          </div>
+          <div class="right">
+            <blockquote>It’s a great feeling to know that some things are taken care of on the security front in a way that doesn’t degrade the performance of our applications. The impact is minimal and we’re more secure. The signal-to-noise ratio is great, so I only have to break my flow to focus on security issues when it’s merited.</blockquote>
+            <span class="name">Guillaume Luccisano,</span>
+            <span class="position">CTO at Triplebyte</span>
+          </div>
+          </div>
+        </li>
+      </ul>
+
+      <a href="/customers" class="button-v2 outlined">Read more</a>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="try-sqreen product">
+      <div class="wrapper">
+
+        <h2>Ready to protect your apps?</h2>
+        <span class="subtitle">Signup for free. Get started in minutes.</span>
+        <a href="https://my.sqreen.com/signup" class="button-v2 white">Free Trial</a>
+        <a href="https://www.sqreen.com/demo" class="button-v2 outlined-white">Request demo</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav>
+        <div class="wrapper">
+          <ul>
+            <li>
+              <h4>Product</h4>
+              <ul>
+                <li><a href="/platform">Platform overview</a></li>
+                <li><a href="/protect">Protect Applications</a></li>
+                <li><a href="/observe">Increase Visibility</a></li>
+                <li><a href="/test">Secure Code</a></li>
+                <li><a href="/customers">Customers</a></li>
+                <li><a href="https://www.sqreen.com/demo">Schedule a demo</a></li>
+              </ul>
+            </li>
+            <li class="link-list">
+              <h4>Knowledge base</h4>
+              <ul>
+
+                  <li>
+                    <a href="https://www.sqreen.com/checklists/saas-cto-security-checklist">
+                    The SaaS CTO Security Checklist
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.sqreen.com/checklists/security-engineer-checklist">
+                    The Early Security Engineer’s First 90 Days Checklist
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.sqreen.com/web-application-security/what-is-rasp">
+                    What is RASP?
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.sqreen.com/web-application-security/what-is-waf">
+                    What is WAF?
+                    </a>
+                  </li>
+
+              </ul>
+            </li>
+            <li>
+              <h4>Company</h4>
+              <ul>
+                <li><a href="/company">About</a></li>
+                <li><a href="/company#jobs">Jobs</a></li>
+                <li><a href="/terms">Terms</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/press">Press</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>Docs &amp; help</h4>
+              <ul>
+                <li><a href="https://docs.sqreen.com/">Documentation</a></li>
+                <li><a href="https://blog.sqreen.com">Blog</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/web-application-security">Learning Center</a></li>
+                <li><a href="mailto:support@sqreen.com?Subject=Sqreen">Support</a>
+                </li><li><a href="https://changelog.sqreen.com">Change Log</a></li>
+                <li><a href="https://sqreen.status.io">Service Status</a></li>
+                <li><a href="/security">Security</a></li>
+              </ul>
+            </li>
+            <li>
+              <h4>Talk to sales</h4>
+              <ul>
+                <li>
+                  Email: <a href="mailto:sales@sqreen.com">sales@sqreen.com</a>
+                </li>
+              </ul>
+              <br>
+              <br>
+              <h4>Stay in touch</h4>
+              <ul class="sns">
+                <li>
+                  <a target="_blank" href="https://github.com/Sqreen">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/8f09b98b1334c5ef2cb2f5dc260971229d1a06b3/79a66/assets/img/logos/github-icon.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/SqreenIO">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/3ff3317a8dc0f0e4e4917f2ae8970b4e80cda5b5/80662/assets/img/logos/twitter-icon.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.linkedin.com/company/sqreen">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/cc3606fa27a57e4285450f26a02fed156da314fb/88ba8/assets/img/logos/linkedin-icon.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+              <span class="copyright">©Sqreen 2015-2020</span>
+              <div class="badges">
+                <a title="Realtime application protection" href="https://docs.sqreen.com/faq/sqreen-badges/">
+                  <img style="width:109px;height:36px" src="https://assets.sqreen.com/badges/20171107/sqreen-light-badge.svg" alt="Sqreen | Runtime Application Protection">
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
-    </div>
-  </header>
+    </footer>
 
-  <!-- LANDING HEADER WITH VIDEO -->
-  <section class="master-head-landing">
-    <div class="wrapper">
-      <h1>Runtime Application Self-Protection <br>that works</h1>
-      <p>Sqreen’s unique Runtime Application Self-Protection (RASP) architecture provides in-depth visibility and protection beyond the HTTP layer. Trusted by security teams. Loved by developers.</p>
-      <div class="button-container">
-        <a href="https://my.sqreen.com/signup?&amp;referrer=aHR0cHM6Ly93d3cuc3FyZWVuLmNvbS8=" class="new-button white large rounded">Free trial</a>
-        <a href="https://www.sqreen.com/demo" class="new-button white large rounded outlined">Schedule a demo</a>
-      </div>
-      <video class="new" playsinline="" autoplay="" controls="" muted="" preload="auto" poster="assets/img/illustrations/cover-new-video.png" type="video/mp4">
-        <source src="https://d33wubrfki0l68.cloudfront.net/b7b11d37afb81f8026fb0952a58ecd37fcba4d76/6870d/assets/img/illustrations/rasp_video.mp4">
-        <p>Your browser doesn't support HTML5 video.</p>
-      </video>
-    </div>
-  </section>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script src="assets/js/carousel.js"></script>
 
-  <!-- CUSTOMER CAROUSEL -->
-  <section class="home-testimonials">
-    <div class="wrapper">
-    <h2>Used by 800+ customers</h2>
-    <ul class="testimonials-list">
-      <li>
-        <div class="case-study">
-          <div class="left">
-            <img src="https://d33wubrfki0l68.cloudfront.net/2ccfa53087e94362ca5d3fc0d68c6845b94dabcd/66aa9/assets/img/logos/company-logos/freeagent.svg" alt="" class="logo">
-          </div>
-          <div class="right">
-            <blockquote>With Sqreen, we’ve been able to deal with some major attacks with ease over the past year. On top of that, the number of false positives is negligible, if not zero, which is a fantastic benefit. I know I only have to spring into action if it’s merited!</blockquote>
-            <span class="name">Richard Grey</span>
-            <span class="position">Head of Information Security at Freeagent</span>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="case-study">
-          <div class="left">
-            <img src="https://d33wubrfki0l68.cloudfront.net/586bdafbeaa2bcfd7b80d831dcdda331d34467f2/e4b73/assets/img/logos/company-logos/algolia.svg" alt="" class="logo">
-          </div>
-          <div class="right">
-            <blockquote>Sqreen delivers the security monitoring that Algolia needs to able to confidently promise a tier-one service to our customers.</blockquote>
-            <span class="name">Sylvain Utard</span>
-            <span class="position">VP Engineering at Algolia</span>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="case-study">
-          <div class="left">
-          <img src="https://d33wubrfki0l68.cloudfront.net/ddfe91bb87df9d7da55eddf96f66ebfc88e89b84/8334d/assets/img/logos/company-logos/lemonde.svg" alt="" class="logo">
-        </div>
-        <div class="right">
-          <blockquote>Our website and applications are under constant attack from hackers and bots. Sqreen allowed us to secure our apps with staggering efficiency and was incredibly fast to set up.</blockquote>
-          <span class="name">Sacha Morard</span>
-          <span class="position">CTO at Le Monde Group</span>
-        </div>
-        </div>
-      </li>
-      <li>
-        <div class="case-study">
-          <div class="left">
-            <img src="https://d33wubrfki0l68.cloudfront.net/55d8682f428cc341e947789cdd272ae91c6ab2c2/31114/assets/img/logos/company-logos/rainforest.svg" alt="" class="logo">
-          </div>
-          <div class="right">
-            <blockquote>Sqreen is open constantly in my browser. I check it every day and keep up with email alerts. As a one-person security team, the value for me is really peace of mind. I know Sqreen will alert me when anything happens, so I can focus on the other security items on my plate.</blockquote>
-            <span class="name">Nicolas Valcárcel</span>
-            <span class="position">Security Architect at Rainforest QA</span>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="case-study">
-          <div class="left">
-          <img src="https://d33wubrfki0l68.cloudfront.net/029f1cd5adba6dec63c1216f8d38712735385906/eedea/assets/img/logos/company-logos/front.svg" alt="" class="logo">
-        </div>
-        <div class="right">
-          <blockquote>Sqreen supports the most important side of our business: the application. I know that if something goes wrong there, I will be alerted, and have visibility into the issue right away. The peace of mind that brings cannot be overstated.</blockquote>
-          <span class="name">Matthieu Bouthors</span>
-          <span class="position">Senior Security Engineer at Front</span>
-        </div>
-        </div>
-      </li>
-      <li>
-        <div class="case-study">
-          <div class="left">
-          <img src="https://d33wubrfki0l68.cloudfront.net/6247b81358a4e8d9945f25673a97bfe7d844013e/d748f/assets/img/logos/company-logos/tripelbyte.svg" alt="" class="logo">
-        </div>
-        <div class="right">
-          <blockquote>It’s a great feeling to know that some things are taken care of on the security front in a way that doesn’t degrade the performance of our applications. The impact is minimal and we’re more secure. The signal-to-noise ratio is great, so I only have to break my flow to focus on security issues when it’s merited.</blockquote>
-          <span class="name">Guillaume Luccisano,</span>
-          <span class="position">CTO at Triplebyte</span>
-        </div>
-        </div>
-      </li>
-    </ul>
-
-    <a href="/customers" class="button-v2 outlined">Read more</a>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="try-sqreen product">
-    <div class="wrapper">
-
-      <h2>Ready to protect your apps?</h2>
-      <span class="subtitle">Signup for free. Get started in minutes.</span>
-      <a href="https://my.sqreen.com/signup" class="button-v2 white">Free Trial</a>
-      <a href="https://www.sqreen.com/demo" class="button-v2 outlined-white">Request demo</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <nav>
-      <div class="wrapper">
-        <ul>
-          <li>
-            <h4>Product</h4>
-            <ul>
-              <li><a href="/platform">Platform overview</a></li>
-              <li><a href="/protect">Protect Applications</a></li>
-              <li><a href="/observe">Increase Visibility</a></li>
-              <li><a href="/test">Secure Code</a></li>
-              <li><a href="/customers">Customers</a></li>
-              <li><a href="https://www.sqreen.com/demo">Schedule a demo</a></li>
-            </ul>
-          </li>
-          <li class="link-list">
-            <h4>Knowledge base</h4>
-            <ul>
-
-                <li>
-                  <a href="https://www.sqreen.com/checklists/saas-cto-security-checklist">
-                  The SaaS CTO Security Checklist
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.sqreen.com/checklists/security-engineer-checklist">
-                  The Early Security Engineer’s First 90 Days Checklist
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.sqreen.com/web-application-security/what-is-rasp">
-                  What is RASP?
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.sqreen.com/web-application-security/what-is-waf">
-                  What is WAF?
-                  </a>
-                </li>
-
-            </ul>
-          </li>
-          <li>
-            <h4>Company</h4>
-            <ul>
-              <li><a href="/company">About</a></li>
-              <li><a href="/company#jobs">Jobs</a></li>
-              <li><a href="/terms">Terms</a></li>
-              <li><a href="/privacy">Privacy</a></li>
-              <li><a href="/press">Press</a></li>
-            </ul>
-          </li>
-          <li>
-            <h4>Docs &amp; help</h4>
-            <ul>
-              <li><a href="https://docs.sqreen.com/">Documentation</a></li>
-              <li><a href="https://blog.sqreen.com">Blog</a></li>
-              <li><a href="/resources">Resources</a></li>
-              <li><a href="/web-application-security">Learning Center</a></li>
-              <li><a href="mailto:support@sqreen.com?Subject=Sqreen">Support</a>
-              </li><li><a href="https://changelog.sqreen.com">Change Log</a></li>
-              <li><a href="https://sqreen.status.io">Service Status</a></li>
-              <li><a href="/security">Security</a></li>
-            </ul>
-          </li>
-          <li>
-            <h4>Talk to sales</h4>
-            <ul>
-              <li>
-                Email: <a href="mailto:sales@sqreen.com">sales@sqreen.com</a>
-              </li>
-            </ul>
-            <br>
-            <br>
-            <h4>Stay in touch</h4>
-            <ul class="sns">
-              <li>
-                <a target="_blank" href="https://github.com/Sqreen">
-                  <img src="https://d33wubrfki0l68.cloudfront.net/8f09b98b1334c5ef2cb2f5dc260971229d1a06b3/79a66/assets/img/logos/github-icon.svg" alt="">
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://twitter.com/SqreenIO">
-                  <img src="https://d33wubrfki0l68.cloudfront.net/3ff3317a8dc0f0e4e4917f2ae8970b4e80cda5b5/80662/assets/img/logos/twitter-icon.svg" alt="">
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://www.linkedin.com/company/sqreen">
-                  <img src="https://d33wubrfki0l68.cloudfront.net/cc3606fa27a57e4285450f26a02fed156da314fb/88ba8/assets/img/logos/linkedin-icon.svg" alt="">
-                </a>
-              </li>
-            </ul>
-            <span class="copyright">©Sqreen 2015-2020</span>
-            <div class="badges">
-              <a title="Realtime application protection" href="https://docs.sqreen.com/faq/sqreen-badges/">
-                <img style="width:109px;height:36px" src="https://assets.sqreen.com/badges/20171107/sqreen-light-badge.svg" alt="Sqreen | Runtime Application Protection">
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-  <script>
-  // Changing color of navigation
-  //=========================================
-  $(document).ready(function(){
-    if ($('header').offset().top >= (window.innerHeight/6)) {
-      $('header').addClass('scrolled');
-    }
-    $(window).on('scroll', function() {
-      var winHeight = window.innerHeight;
-      var winScroll = $('header').offset().top;
-      if (winScroll >= 20) {
-        $('header').addClass('scrolled');
-      }
-      else {
-        $('header').removeClass('scrolled');
-      }
-    });
-
-    // Menu mobile
-    $('.burger').on('click', function(){
-      $('header').toggleClass('open');
-    });
-
-    // Add tracking data to dashboard links if available
-    var attributions = location.search
-      .slice(1)
-      .split("&")
-      .filter(function(s) {
-        return s.startsWith("utm_");
-      })
-      .join("&");
-
-    if (attributions.length > 0 || document.referrer.length > 0) {
-      $('a[href="https://my.sqreen.com/signup"]').attr(
-        "href",
-        "https://my.sqreen.com/signup?" +
-          attributions +
-          "&referrer=" +
-          btoa(document.referrer)
-      );
-      $('a[href="https://my.sqreen.com/login"]').attr(
-        "href",
-        "https://my.sqreen.com/login?" +
-          attributions +
-          "&referrer=" +
-          btoa(document.referrer)
-      );
-    }
-  });
-  </script>
-
-  <script>
-  $(function() {
-    $('.techno-selector li').each(function(i){
-      $(this).attr('id','tab'+i);
-    });
-    $('.terminal-code .code').each(function(i){
-      $(this).addClass('tab'+i);
-    });
-    $('.techno-selector li').click(function() {
-      var id = $(this).attr('id');
-      $('.techno-selector li').removeClass('selected');
-      $(this).addClass('selected');
-      $('.terminal-code .code').removeClass('selected');
-      $('.terminal-code .code.'+id).addClass('selected');
-    });
-  })
-  </script>
-  <script type="text/javascript" src="assets/js/slick.min.js"></script>
-  <script>
-    $(function() {
-      $('.testimonials-list').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        dots: true,
-      });
-    })
-  </script>
-
-    </body>
-  </html>
+  </body>
+</html>
