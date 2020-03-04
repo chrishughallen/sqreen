@@ -727,6 +727,9 @@ header {
 
 .service-block {
   padding: 88px 0; }
+  @media (max-width: 979px) {
+    .service-block {
+      padding: 50px 0; } }
   .service-block .wrapper {
     width: 100%;
     max-width: 1300px;
@@ -781,7 +784,11 @@ header {
           line-height: 1.5;
           margin-bottom: 24px; }
         .service-block .wrapper .block__right .bullets {
-          list-style: none; }
+          list-style: none;
+          margin-left: 15px; }
+          @media (max-width: 979px) {
+            .service-block .wrapper .block__right .bullets {
+              margin: 0; } }
           .service-block .wrapper .block__right .bullets li {
             font-family: "Proxima Nova",sans-serif;
             position: relative;
@@ -807,9 +814,56 @@ header {
           font-size: 1.2857142857rem;
           font-weight: 500;
           color: #4842B7;
-          text-decoration: none; }
+          text-decoration: none;
+          margin-left: 15px; }
+          @media (max-width: 979px) {
+            .service-block .wrapper .block__right .learn-more-link {
+              margin-left: 0; } }
           .service-block .wrapper .block__right .learn-more-link:hover {
             text-decoration: underline; }
+
+.customer-quote {
+  padding: 88px 0; }
+  @media (max-width: 979px) {
+    .customer-quote {
+      padding: 0 0 50px 0; } }
+  .customer-quote .wrapper {
+    width: 100%;
+    display: block;
+    background: #1e0936;
+    display: flex;
+    justify-content: center; }
+    .customer-quote .wrapper .inner-block {
+      height: 100%;
+      width: 35%;
+      justify-content: center;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      padding: 50px; }
+      @media (max-width: 979px) {
+        .customer-quote .wrapper .inner-block {
+          padding: 80px 40px;
+          width: 100%;
+          align-items: flex-start; } }
+      .customer-quote .wrapper .inner-block .quote-info {
+        color: #fff; }
+        .customer-quote .wrapper .inner-block .quote-info .logo svg {
+          width: 150px; }
+        .customer-quote .wrapper .inner-block .quote-info .spokesperson {
+          font-family: "Moderat",sans-serif;
+          font-weight: 500;
+          padding: 10px 0; }
+      .customer-quote .wrapper .inner-block .quote blockquote {
+        font-family: "Moderat",sans-serif;
+        font-size: 25px;
+        font-weight: 200;
+        color: #fff;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        position: relative; }
+        .customer-quote .wrapper .inner-block .quote blockquote:before, .customer-quote .wrapper .inner-block .quote blockquote:after {
+          content: "\201D"; }
 
 .try-sqreen {
   text-align: center; }
