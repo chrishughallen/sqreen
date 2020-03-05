@@ -5,8 +5,7 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html,
 body {
@@ -17,22 +16,15 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-}
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif; }
 
 body {
-  line-height: 1;
-
-  &.overflow {
-    overflow-x: hidden;
-  }
-
-  &.fixed-body {
-    overflow: hidden;
-  }
-}
+  line-height: 1; }
+  body.overflow {
+    overflow-x: hidden; }
+  body.fixed-body {
+    overflow: hidden; }
 
 ul,
 ol {
-  list-style: none;
-}
+  list-style: none; }

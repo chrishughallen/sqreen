@@ -16,6 +16,8 @@ $(document).ready(function(){
   // Menu mobile
   $('.burger').on('click', function(){
     $('header').toggleClass('open');
+    // Prevent body from scrolling when menu is open
+    $('body').toggleClass('fixed-body');
   });
 
   // Add tracking data to dashboard links if available

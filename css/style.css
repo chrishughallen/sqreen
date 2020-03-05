@@ -28,6 +28,8 @@ body {
   line-height: 1; }
   body.overflow {
     overflow-x: hidden; }
+  body.fixed-body {
+    overflow: hidden; }
 
 ul,
 ol {
@@ -174,8 +176,7 @@ p {
   @media (max-width: 979px) {
     .button-v2 {
       display: block;
-      width: 100%;
-      margin-bottom: 10px; } }
+      width: 100%; } }
   .button-v2.white {
     background-color: #fff;
     color: #4842B7; }
@@ -220,6 +221,9 @@ p {
     letter-spacing: 1px;
     padding: 15px 20px;
     margin: 0 10px; }
+    @media (max-width: 979px) {
+      .new-button.large {
+        margin: 15px 10px; } }
   .new-button.outlined {
     box-shadow: inset 0 0 0 2px #fff;
     background-color: transparent;
@@ -1145,7 +1149,8 @@ footer {
         outline: none; }
         @media (max-width: 979px) {
           .try-sqreen.product .wrapper .button-v2 {
-            width: 100%; } }
+            width: 100%;
+            margin: 10px 0; } }
         .try-sqreen.product .wrapper .button-v2.white {
           background-color: #fff;
           color: #4842B7; }
