@@ -1,0 +1,35 @@
+.master-head-landing {
+  padding: 160px 0 40px;
+  background: linear-gradient(173.27deg, #6f42e7 10.1%, #432d80 81.64%);
+  text-align: center;
+  margin-bottom: 160px;
+
+  @include media-breakpoint-sm {
+    padding: 100px 0 40px;
+  }
+
+  @include media-breakpoint-md {
+    margin-bottom: 40px;
+  }
+
+  .wrapper {
+    video {
+      max-height: 450px;
+      position: relative;
+      margin-bottom: -160px;
+      box-shadow: 0 33px 30px -20px rgba(55,52,115,0.3);
+      border-radius: 5px;
+      &.new {
+        max-width: 720px;
+
+        @include media-breakpoint-md {
+          max-width: 100%;
+        }
+
+        @include media-breakpoint-sm {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

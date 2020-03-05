@@ -1,0 +1,190 @@
+.home-testimonials {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 80px 0;
+  border-bottom: 1px solid #e7e7e7;
+
+  @include media-breakpoint-md {
+    padding: 50px 0;
+  }
+
+  .wrapper {
+    .testimonials-list {
+      margin-bottom: 60px !important;
+
+      .slick-dots {
+        bottom: -35px;
+
+        li {
+          padding: 0;
+        }
+      }
+
+      li {
+        outline: none;
+        padding: 20px;
+      }
+
+      .case-study {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        margin: 0 auto;
+
+        @include media-breakpoint-md {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 0;
+        }
+
+        .left {
+          padding: 20px 30px;
+          width: 300px;
+          height: 300px;
+          position: relative;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          align-content: center;
+
+          @include media-breakpoint-md {
+            width: 260px;
+            height: 260px;
+            margin: 0 auto;
+            padding: 0;
+          }
+
+          &:before {
+            content: "";
+            background-image: url('../assets/img/icons/blob.svg');
+            background-size: contain;
+            width: 240px;
+            height: 203px;
+            display: block;
+            position: absolute;
+            top: 40px;
+            right: -20px;
+            z-index: -1;
+            opacity: 0.3;
+          }
+
+          .img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0 auto 10px;
+            display: block;
+
+            @include media-breakpoint-md {
+              width: 230px;
+              height: 230px;
+              margin: 30px auto 0 -10px;
+            }
+          }
+        }
+
+        .right {
+          padding: 20px 0 20px 80px;
+
+          @include media-breakpoint-md {
+            padding: 10px 0;
+          }
+
+          blockquote {
+            display: block;
+            font-family: "Moderat",sans-serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.2857142857rem;
+            line-height: 2.1428571429rem;
+            color: rgba(30,9,54,0.8);
+            max-width: 470px;
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+
+            @include media-breakpoint-md {
+              font-size: 1.2857142857rem;
+              text-align: center;
+              margin: 0 auto 20px;
+            }
+
+            &:before {
+              content: "“";
+              font-size: 14.8571428571rem;
+              margin-right: 2px;
+              font-family: "Moderat",sans-serif;
+              font-style: italic;
+              color: #F5F4FF;
+              position: absolute;
+              z-index: -1;
+              top: 40px;
+              left: -70px;
+            }
+
+            &:after {
+              content: "”";
+              font-size: 14.8571428571rem;
+              margin-right: 2px;
+              font-family: "Moderat",sans-serif;
+              font-style: italic;
+              color: #F5F4FF;
+              margin-left: 2px;
+              position: absolute;
+              z-index: -1;
+              bottom: -60px;
+              right: 10px;
+            }
+          }
+
+          .name {
+            font-family: "Moderat",sans-serif;
+            font-size: 1.3571428571rem;
+            line-height: 23px;
+            font-weight: bold;
+            color: #1e0936;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+
+            @include media-breakpoint-md {
+              text-align: center;
+            }
+          }
+
+          .position {
+            font-family: "Moderat",sans-serif;
+            font-size: .7142857143rem;
+            line-height: 12px;
+            font-weight: bold;
+            color: rgba(30,9,54,0.5);
+            position: relative;
+            display: block;
+            text-align: left;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+
+            @include media-breakpoint-md {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px #4842B7;
+      color: #4842B7;
+    }
+  }
+}

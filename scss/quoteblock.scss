@@ -1,0 +1,58 @@
+.customer-quote {
+  padding: 80px 0;
+  @include media-breakpoint-md {
+    padding: 0 0 50px 0;
+  }
+  .wrapper {
+    background: #1e0936;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    .inner-block {
+      height: 100%;
+      width: 35%;
+      justify-content: center;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+
+      @include media-breakpoint-md {
+        padding: 80px 40px;
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .quote-info {
+        color: #fff;
+        .logo {
+          svg {
+            width: 150px;
+          }
+        }
+        .spokesperson {
+          font-family: "Moderat",sans-serif;
+          font-weight: 500;
+          padding: 10px 0;
+        }
+      }
+
+      .quote {
+        blockquote {
+          font-family: "Moderat",sans-serif;
+          font-size: 25px;
+          font-weight: 200;
+          color: #fff;
+          line-height: 1.2;
+          margin-bottom: 20px;
+          position: relative;
+          &:before,
+          &:after {
+            content: "\201D"
+          }
+        }
+      }
+    }
+  }
+}
