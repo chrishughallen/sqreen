@@ -1,0 +1,113 @@
+.three-blocks {
+  position: relative;
+  background-color: #f8f9ff;
+  z-index: 20;
+  text-align: center;
+  padding: 100px 0;
+  border-top: 1px solid #e7e7e7;
+
+  @include media-breakpoint-md {
+    padding: 50px 0;
+  }
+
+  .wrapper {
+    ul {
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      justify-content: space-evenly;
+      align-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      margin-bottom: 50px;
+      list-style: none;
+
+      @include media-breakpoint-md {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
+
+      li {
+        text-align: left;
+
+        @include media-breakpoint-md {
+          text-align: center;
+          width: 100%;
+          &:nth-child(n+2) {
+            margin-top: 50px;
+          }
+        }
+
+        .icon-block {
+          width: 100px;
+          height: 100px;
+          margin-right: 30px;
+          display: -webkit-inline-box;
+          display: inline-flex;
+          vertical-align: top;
+          -webkit-box-pack: center;
+          justify-content: center;
+          align-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+
+          svg {
+            max-width: 60px;
+            max-height: 60px;
+
+            path {
+              fill: #4842B7;
+            }
+          }
+
+          &.sqreen {
+            background: rgba(72,66,183,0.1);
+          }
+
+          @include media-breakpoint-md {
+            margin: 0 auto 20px;
+            display: -webkit-box;
+            display: flex;
+          }
+        }
+
+        div {
+          display: inline-block;
+          vertical-align: top;
+          width: calc(100% - 160px);
+
+          @include media-breakpoint-md {
+            display: block;
+            width: 100%;
+          }
+
+          .title {
+            margin-bottom: 10px;
+            display: inline-block;
+            font-family: "Moderat",sans-serif;
+            font-weight: 500;
+            font-size: 1.4285714286rem;
+            line-height: 24px;
+            color: #1e0936;
+          }
+
+          p {
+            font-size: 1.2857142857rem;
+            line-height: 24px;
+            color: #1e0936;
+            opacity: 0.8;
+
+            @include media-breakpoint-md {
+              margin: 0 auto;
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .button-container {
+    @include media-breakpoint-md {
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.service-block {
+  padding: 88px 0;
+  @include media-breakpoint-md {
+    padding: 50px 0;
+  }
+  .wrapper {
+    .block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      grid-template-areas: "image content";
+
+      @include media-breakpoint-md {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "image"
+          "content";
+      }
+
+      &--reverse {
+        grid-template-areas: "content image";
+
+        @include media-breakpoint-md {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "image"
+            "content";
+        }
+      }
+
+      &__left {
+        grid-area: image;
+        align-self: center;
+        @include media-breakpoint-md {
+          justify-self: center;
+        }
+        img {
+          width: 100%;
+          max-width: 600px;
+          box-shadow: 0px 14px 21px rgba(30,9,54,0.18);
+          border-radius: 4px;
+        }
+      }
+
+      &__right {
+        grid-area: content;
+        margin-left: 40px;
+        @include media-breakpoint-md {
+          text-align: center;
+          margin: 40px 20px;
+        }
+        .title {
+          font-family: "Moderat",sans-serif;
+          font-weight: 500;
+          font-size: 2.2857142857rem;
+          line-height: 40px;
+          display: inline-block;
+          margin-bottom: 24px;
+          color: #1e0936;
+          vertical-align: middle;
+        }
+        .subtitle {
+          font-size: 19px;
+          color: rgba(30,9,54,0.7);
+          line-height: 1.5;
+          margin-bottom: 24px;
+        }
+        .bullets {
+          list-style: none;
+          margin-left: 15px;
+
+          @include media-breakpoint-md {
+            margin: 0;
+          }
+
+          li {
+            font-family: "Proxima Nova",sans-serif;
+            position: relative;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.5;
+            padding-left: 30px;
+            color: rgba(30,9,54,0.8);
+            margin-bottom: 15px;
+
+            &:before {
+              content: "";
+              width: 7px;
+              height: 7px;
+              display: block;
+              background-color: #4842B7;
+              border-radius: 50%;
+              position: absolute;
+              top: 6px;
+              left: 0;
+            }
+          }
+        }
+        .learn-more-link {
+          line-height: 60px;
+          font-family: "Moderat",sans-serif;
+          font-size: 1.2857142857rem;
+          font-weight: 500;
+          color: #4842B7;
+          text-decoration: none;
+          margin-left: 15px;
+
+          @include media-breakpoint-md {
+            margin-left: 0;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

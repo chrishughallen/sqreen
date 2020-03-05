@@ -1,0 +1,23 @@
+@mixin media-breakpoint-xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-md {
+  @media (max-width: 979px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}

@@ -1,0 +1,109 @@
+.try-sqreen {
+  text-align: center;
+
+  &.product {
+    padding: 80px 0;
+    background: #4842B7;
+    position: relative;
+
+    &:before {
+      content: "";
+      background-image: url("../assets/img/photos/try-sqreen-bg.png");
+      position: absolute;
+      mix-blend-mode: color-burn;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+    }
+
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      display: block;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      @include media-breakpoint-md {
+        max-width: 100%;
+      }
+
+      h2 {
+        font-family: "Moderat",sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+        display: block;
+        margin: 0 auto 10px;
+        letter-spacing: -0.02em;
+
+        @include media-breakpoint-md {
+          font-size: 24px;
+          margin: 0 auto 7px;
+        }
+      }
+
+      .subtitle {
+        font-family: "Proxima Nova",sans-serif;
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: center;
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin: 0 auto 30px;
+
+        @include media-breakpoint-md {
+          font-size: 19px;
+          margin: 0 auto 40px;
+        }
+      }
+
+      .button-v2 {
+        margin: 0 10px;
+        display: inline-block;
+        font-family: "Moderat",sans-serif;
+        text-align: center;
+        font-size: 1.2857142857rem;
+        padding: 15px 30px;
+        background-color: #4842B7;
+        color: #fff;
+        -webkit-transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
+        transition: 0.18s cubic-bezier(0.55, 0, 0.1, 1);
+        text-decoration: none;
+        white-space: nowrap;
+        line-height: normal;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        -webkit-transition: .1s ease;
+        transition: .1s ease;
+        outline: none;
+
+        @include media-breakpoint-md {
+          width: 100%;
+        }
+
+        &.white {
+          background-color: #fff;
+          color: #4842B7;
+        }
+
+        &.outlined-white {
+          margin-top: 20px;
+          background-color: transparent;
+          box-shadow: inset 0 0 0 2px #fff;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
